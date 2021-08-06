@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+h3{
+    text-align: center;
+    color: white;
+    margin-left: 30vw;
+    margin-top: 2%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 10px;
+    padding: 1%;
+    width: 30vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(to right, rgb(0, 0, 0) 50%, greenyellow 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+}
+
+h3:hover{
+    background-position:right bottom;
+    transition: all 2s ease;
+    color: black;
+}
+
+.error-prompt{
+    color: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.active-input{
+    transition: 1s;
+    border: 0px;
+    background: none;
+    width: 1vw;
+    height: 4vh;
+    position: absolute;
+    top: 40%;
+    left: 49vw;
+    background-color: rgb(7, 245, 26);
+    outline: none;
+    animation: blink infinite 0.5s;
+    font-size: larger;
+    color:rgba(0, 0, 0, 0);
+}
+
+.active-input::placeholder{
+    color: rgba(0, 0, 0, 0);
+}
+
+.active-input::placeholder:focus{
+    font-size: larger;
+    color: black;
+}
+
+.active-input:focus{
+    color: rgb(7, 245, 26);
+    animation: none;
+    left: 25vw;
+    border-radius: 3px;
+    border-left: 2px solid rgb(7, 245, 26);
+    border-right: 2px solid rgb(7, 245, 26);
+    background-color: black;
+    width: 50vw;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@keyframes blink {
+    0% {background-color: black;}
+    100% {background-color: rgb(7, 245, 26);}
+}

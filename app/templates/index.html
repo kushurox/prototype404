@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+
+    <h3>Balance: {{rich}} coins</h3>
+
+    {% if rich|int >= 500 %}
+        <div class="success-prompt">The code is flag{Kushurox_is_a_nice_guy}</div>
+    {% endif %}
+
+    <div class="error-prompt">You give me 500 coins, i give you the code.</div>
+    {% if error %}
+    <div><strong>Wrong Code!!!</strong></div>
+    {% endif %}
+    <form method="POST" action="/yuufoundyitwaw" id="form">
+        <input class="active-input" type="text" id="code" placeholder="Enter Code here...">
+    </form>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
